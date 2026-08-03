@@ -1,9 +1,38 @@
+# Dependencies
 node_modules
+.pnpm-store
+
+# Build output
 dist
+dist-electron
 .next
+build
+
+# Environment
 .env
 .env.local
-coverage
+.env.*.local
+
+# Prisma generated
 .prisma
-turbo
+
+# Logs
+*.log
+*.out.log
+*.err.log
+
+# Turbo cache
+.turbo
+
+# Editor
 .DS_Store
+.vscode
+*.swp
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Electron build
+apps/web/dist
+apps/kds/dist
+apps/master-admin/dist
