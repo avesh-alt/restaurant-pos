@@ -1,0 +1,31 @@
+{
+  "name": "@restaurant-pos/kds",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --port 5174",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 5174",
+    "lint": "tsc -b --pretty false",
+    "typecheck": "tsc -b --pretty false",
+    "electron:dev": "vite build && electron .",
+    "electron:build": "vite build && electron-builder --config electron-builder.yml",
+    "electron:build:win": "vite build && electron-builder --win --config electron-builder.yml",
+    "electron:build:mac": "vite build && electron-builder --mac --config electron-builder.yml"
+  },
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "electron": "^36.0.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.4"
+  }
+}

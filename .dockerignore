@@ -1,0 +1,14 @@
+node_modules
+**/node_modules
+**/dist
+**/dist-electron
+**/.turbo
+**/.cache
+apps/mobile
+infra
+.git
+*.md
+*.log
+.env
+.env.*
+!.env.example

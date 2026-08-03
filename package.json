@@ -1,0 +1,17 @@
+{
+  "name": "restaurant-pos",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "start": "corepack pnpm --filter @restaurant-pos/shared build && corepack pnpm -r --parallel run dev",
+    "build": "corepack pnpm -r run build",
+    "dev": "corepack pnpm --filter @restaurant-pos/shared build && corepack pnpm -r --parallel run dev",
+    "db:seed": "corepack pnpm --filter @restaurant-pos/api db:seed",
+    "db:generate": "corepack pnpm --filter @restaurant-pos/api prisma:generate",
+    "lint": "corepack pnpm -r run lint",
+    "typecheck": "corepack pnpm -r run typecheck"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.6"
+  }
+}

@@ -1,0 +1,41 @@
+appId: com.restaurantpos.kds
+productName: Kitchen Display System
+copyright: Copyright © 2025
+
+main: electron/main.cjs
+
+directories:
+  output: dist-electron
+  buildResources: public
+
+files:
+  - dist/**
+  - electron/**
+  - package.json
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: public/icon.ico
+  requestedExecutionLevel: asInvoker
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Kitchen Display
+
+mac:
+  target: dmg
+  icon: public/icon.icns
+  category: public.app-category.business
+
+linux:
+  target: AppImage
+  icon: public/icon.png
+  category: Office

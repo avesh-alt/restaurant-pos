@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Restaurant POS",
+    "slug": "restaurant-pos-mobile",
+    "scheme": "restaurant-pos-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0d1117"
+    },
+    "platforms": ["ios", "android"],
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.restaurantpos.mobile"
+    },
+    "android": {
+      "package": "com.restaurantpos.mobile",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0d1117"
+      }
+    },
+    "updates": {
+      "enabled": false
+    },
+    "plugins": [
+      "expo-secure-store"
+    ]
+  }
+}
