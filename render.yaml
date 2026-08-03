@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: restaurant-pos-api
+    runtime: node
+    buildCommand: npx pnpm@9.15.0 install && npx pnpm@9.15.0 --filter @restaurant-pos/shared build && cd apps/api && npx prisma generate && npx pnpm@9.15.0 --filter @restaurant-pos/api build
+    startCommand: cd apps/api && npx prisma migrate deploy && node dist/server.js
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "4000"
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false
